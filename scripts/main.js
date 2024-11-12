@@ -1,31 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-
     // Theme toggle
     const themeToggle = document.getElementById("theme-toggle");
     themeToggle.addEventListener("click", () => {
         document.body.classList.toggle("dark-theme");
-        document.body.classList.toggle("light-theme");
         themeToggle.textContent = document.body.classList.contains("dark-theme") ? "🌞" : "🌙";
     });
 
-    // Carousel functionality
+    // Carousel functionality with manual navigation
     let currentIndex = 0;
     const carouselItems = document.querySelectorAll('.carousel-item');
+    const totalItems = carouselItems.length;
+    const prevButton = document.getElementById("prev");
+    const nextButton = document.getElementById("next");
 
-    function showNextProject() {
-        carouselItems[currentIndex].style.transform = "translateX(-100%)";
-        currentIndex = (currentIndex + 1) % carouselItems.length;
-        carouselItems[currentIndex].style.transform = "translateX(0)";
+    function showProject(index) {
+        carouselItems.forEach((item, i) => {
+            item.style.transform = `translateX(${100 * (i - index)}%)`;
+        });
     }
 
-    setInterval(showNextProject, 3000);
+    prevButton.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        showProject(currentIndex);
+    });
+
+    nextButton.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % totalItems;
+        showProject(currentIndex);
+    });
+
+    // Initial display
+    showProject(currentIndex);
 });

@@ -78,13 +78,56 @@ section {
     transition: transform 0.5s ease;
 }
 
+/* Carousel button positioning */
+.carousel {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+#prev { left: 10px; }
+#next { right: 10px; }
+
 /* Footer */
 footer {
     padding: 20px;
     text-align: center;
     background: rgba(51, 51, 51, 0.9);
     color: white;
-    position: fixed;
-    bottom: 0;
     width: 100%;
+}
+
+
+/* Button hover effects */
+button {
+    background: #8e2de2;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Base styling adjustments, theme colors */
+body.light-theme {
+    background: linear-gradient(to bottom, #8e2de2, #4a00e0);
+    color: #333;
+}
+
+body.dark-theme {
+    background: linear-gradient(to bottom, #333, #111);
+    color: #f4f4f9;
 }
