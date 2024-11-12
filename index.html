@@ -4,21 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daria Ciobanu | Resume</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="scripts/main.js" defer></script>
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
     <header>
         <h1>Daria Ciobanu</h1>
         <p>Engineer Undergraduate | Computer Science</p>
         <p>Email: dariasianisia@gmail.com | Phone: 0756 925 146</p>
     </header>
 
+    <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
         <p>A motivated and goal-driven Computer Science undergraduate with a passion for AI, cybersecurity, and software development...</p>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills">
         <h2>Skills</h2>
         <ul>
@@ -28,15 +41,33 @@
         </ul>
     </section>
 
+    <!-- Experience Section -->
     <section id="experience">
         <h2>Experience</h2>
-        <p>Details on internships, projects, and competitions like FTC, Nextlab, Unihack.</p>
+        <div class="experience-card">
+            <h3>FPGA project for College class</h3>
+            <p>Worked on developing FPGA solutions for image processing.</p>
+        </div>
+        <div class="experience-card">
+            <h3>Arduino Project</h3>
+            <p>Developed an Arduino-based temperature and humidity monitoring system.</p>
+        </div>
+        <div class="experience-card">
+            <h3>Unihack Competition</h3>
+            <p>Participated in a 48-hour hackathon, developing a web app focused on accessibility.</p>
+        </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: dariasianisia@gmail.com</p>
+        <p>Email: <a href="mailto:dariasianisia@gmail.com">dariasianisia@gmail.com</a></p>
         <p>Phone: 0756 925 146</p>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Daria Ciobanu</p>
+    </footer>
 </body>
 </html>
