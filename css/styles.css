@@ -107,3 +107,31 @@ footer {
     background-color: #333;
     color: white;
 }
+
+/* Carousel styling */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    transition: transform 0.5s ease;
+}
+
+/* Progress bars animation */
+.skill .progress-bar span {
+    display: block;
+    height: 12px;
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    animation: fill-bar 1.5s forwards;
+}
+
+@keyframes fill-bar {
+    from { width: 0; }
+    to { width: var(--width); }
+}
+

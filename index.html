@@ -3,71 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daria Ciobanu | Resume</title>
+    <title>Daria Ciobanu - CV</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="scripts/main.js" defer></script>
 </head>
-<body>
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<body class="light-theme">
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
 
-    <!-- Header -->
     <header>
-        <h1>Daria Ciobanu</h1>
-        <p>Engineer Undergraduate | Computer Science</p>
-        <p>Email: dariasianisia@gmail.com | Phone: 0756 925 146</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+            <a href="#testimonials">Testimonials</a>
+        </nav>
     </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>A motivated and goal-driven Computer Science undergraduate with a passion for AI, cybersecurity, and software development...</p>
-    </section>
+    <main>
+        <!-- Intro Section -->
+        <section id="intro">
+            <h1>Daria Ciobanu</h1>
+            <p>Tech enthusiast, team leader, and programmer.</p>
+            <img src="images/profile.jpg" alt="Daria Ciobanu">
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>C, C++, Java, Python, Matlab</li>
-            <li>Git & GitHub</li>
-            <li>FPGA design, Arduino projects, Mobile app development</li>
-        </ul>
-    </section>
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I am a highly motivated and responsible individual with a strong sense of leadership...
+            </p>
+            <button id="download-resume">Download Resume</button>
+        </section>
 
-    <!-- Experience Section -->
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="experience-card">
-            <h3>FPGA project for College class</h3>
-            <p>Worked on developing FPGA solutions for image processing.</p>
-        </div>
-        <div class="experience-card">
-            <h3>Arduino Project</h3>
-            <p>Developed an Arduino-based temperature and humidity monitoring system.</p>
-        </div>
-        <div class="experience-card">
-            <h3>Unihack Competition</h3>
-            <p>Participated in a 48-hour hackathon, developing a web app focused on accessibility.</p>
-        </div>
-    </section>
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Team Leader and Coach</h3>
+                <p>2020-2023 | The Emperor Robotics Team</p>
+                <p>Led the programming team and coached young talents in robotics.</p>
+            </div>
+            <!-- More experience items can be added here -->
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:dariasianisia@gmail.com">dariasianisia@gmail.com</a></p>
-        <p>Phone: 0756 925 146</p>
-    </section>
+        <!-- Projects Section with Carousel -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <h3>FPGA Video Transmission</h3>
+                    <p><a href="https://github.com/LD-FPGA-Project" target="_blank">View Project</a></p>
+                </div>
+                <!-- Add more carousel items as needed -->
+            </div>
+        </section>
 
-    <!-- Footer -->
+        <!-- Skills Section with Animated Bars -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skill">
+                <label>Python</label>
+                <div class="progress-bar"><span style="width: 80%"></span></div>
+            </div>
+            <div class="skill">
+                <label>JavaScript</label>
+                <div class="progress-bar"><span style="width: 70%"></span></div>
+            </div>
+        </section>
+
+        <!-- Testimonials or Awards Section -->
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <p>"Daria is a brilliant programmer with excellent team management skills..."</p>
+        </section>
+
+        <!-- Contact Section with Form -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2024 Daria Ciobanu</p>
+        <p>&copy; 2024 Daria Ciobanu | <a href="https://github.com/DariaCiobanu">GitHub</a> | <a href="https://linkedin.com/in/DariaCiobanu">LinkedIn</a></p>
     </footer>
 </body>
 </html>
