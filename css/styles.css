@@ -10,102 +10,58 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f9;
+    background: linear-gradient(to bottom, #8e2de2, #4a00e0);
 }
 
-/* Navigation Bar */
-nav {
-    background: #333;
+/* Fixed Navigation Bar */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(51, 51, 51, 0.9);
     padding: 10px;
     text-align: center;
+    z-index: 1000;
 }
 
-nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
+nav a {
     color: white;
+    margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav ul li a:hover {
+nav a:hover {
     color: #f4f4f9;
-}
-
-/* Header */
-header {
-    text-align: center;
-    padding: 20px;
-    background: #333;
-    color: #fff;
-}
-
-h1, h2, h3 {
-    margin-top: 0;
 }
 
 /* Sections */
 section {
-    padding: 20px;
-    margin: 10px auto;
+    padding: 60px 20px;
+    margin: 80px auto 20px;
     max-width: 800px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#skills ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#skills li {
-    background: #eee;
-    margin: 5px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-#skills li:hover {
+/* Skills Progress Bars */
+.skill .progress-bar {
     background: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-/* Experience Cards */
-.experience-card {
-    background-color: #f4f4f9;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+.skill .progress-bar span {
+    display: block;
+    height: 12px;
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    animation: fill-bar 1.5s forwards;
 }
 
-.experience-card h3 {
-    margin-bottom: 5px;
-    color: #333;
-}
-
-/* Contact */
-#contact p, footer p {
-    text-align: center;
-    font-weight: bold;
-}
-
-/* Footer */
-footer {
-    padding: 10px;
-    text-align: center;
-    background-color: #333;
-    color: white;
+@keyframes fill-bar {
+    from { width: 0; }
+    to { width: var(--width); }
 }
 
 /* Carousel styling */
@@ -122,16 +78,13 @@ footer {
     transition: transform 0.5s ease;
 }
 
-/* Progress bars animation */
-.skill .progress-bar span {
-    display: block;
-    height: 12px;
-    background: linear-gradient(to right, #8e2de2, #4a00e0);
-    animation: fill-bar 1.5s forwards;
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: rgba(51, 51, 51, 0.9);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
-
-@keyframes fill-bar {
-    from { width: 0; }
-    to { width: var(--width); }
-}
-
