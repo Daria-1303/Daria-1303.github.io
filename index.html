@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daria Ciobanu - CV</title>
+    <title>Daria Ciobanu</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="scripts/main.js" defer></script>
 </head>
@@ -28,7 +28,9 @@
         <section id="intro">
             <h1>Daria Ciobanu</h1>
             <p>Tech enthusiast, team leader, and programmer.</p>
-            <img src="images/profile.jpg" alt="Daria Ciobanu">
+            <div class="profile-picture">
+                <img src="images/profile.jpg" alt="Daria Ciobanu">
+            </div>
         </section>
 
         <!-- About Section -->
@@ -37,7 +39,26 @@
             <p>I am a highly motivated and responsible individual with a natural sense of leadership and a strong passion for technology. Throughout my experiences as a team leader, mentor, and trainer, I've learned the importance of bringing people together and fostering a supportive and collaborative environment. My leadership style is centered around empathy, effective communication, and a keen awareness of how my actions impact others.</p>
             <p>With a focus on listening and providing clear, constructive feedback, I strive to support others' growth while maintaining professionalism and a positive example. I am committed to continuous personal and professional development, especially in areas such as computer vision, AI, and cybersecurity. I thrive under pressure and am always eager to embrace new challenges, making the most of every opportunity to learn and grow.</p>
 
-            <button id="download-resume">Download Resume</button>
+            <!-- Download Resume Link -->
+            <a href="src/Daria_Ciobanu_CV_02.pdf" download="Daria_Ciobanu_Resume.pdf" id="download-resume" class="btn">Download Resume</a>
+            <style>
+                .btn {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    color: white;
+                    background-color: #8e2de2;
+                    text-align: center;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    transition: background-color 0.3s ease;
+                }
+            
+                .btn:hover {
+                    background-color: #8e2de2;
+                }
+            </style>
+
         </section>
 
         <!-- Experience Section -->
@@ -92,7 +113,7 @@
                         <li>VHDL</li>
                         <li>Python</li>
                     </ul>
-                    
+
                 </div>
             </div>
             <button id="prev" aria-label="Previous Project">⬅️</button>
